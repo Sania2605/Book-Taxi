@@ -1,6 +1,7 @@
+"use client"; 
 import { UserLocationContext } from "@/context/UserLocationContext";
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Map, Marker } from "react-map-gl";
+import Map, {Marker} from 'react-map-gl/mapbox';
 import "mapbox-gl/dist/mapbox-gl.css";
 import Markers from "./Markers";
 import { SourceCordiContext } from "@/context/SourceCordiContext";
@@ -13,7 +14,7 @@ const MAPBOX_DRIVING_ENDPOINT =
 const session_token = "5ccce4a4-ab0a-4a7c-943d-580e55542363";
 
 function MapboxMap() {
-  const mapRef = useRef<any>();
+  const mapRef = useRef<any>(null);
   const { userLocation, setUserLocation } = useContext(UserLocationContext);
   const { soruceCordinates, setSourceCordinates } =
     useContext(SourceCordiContext);

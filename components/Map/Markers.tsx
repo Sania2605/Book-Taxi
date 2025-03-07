@@ -2,7 +2,7 @@ import { DestinationCordiContext } from '@/context/DestinationCordiContext';
 import { SourceCordiContext } from '@/context/SourceCordiContext';
 import { UserLocationContext } from '@/context/UserLocationContext';
 import React, { useContext } from 'react'
-import { Map,Marker } from 'react-map-gl'
+import Map, {Marker} from 'react-map-gl/mapbox';
 
 function Markers() {
     const {userLocation,setUserLocation}
